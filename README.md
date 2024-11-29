@@ -56,7 +56,7 @@ The result file is in csv format and the columns are explained below:
 
 ### cpu and memory consumption
 
-The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment to human cdna file (Homo_sapiens.GRCh38.cdna.all.fa, 429MB) was tested as follows:
+The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment to human cdna file(Homo_sapiens.GRCh38.cdna.all.fa, 429MB) was tested as follows:
 
 | thread number | RunTime(second) | VSZ Memory(GB) | RSS Memory(GB) |
 |---------------|-----------------|----------------|----------------|
@@ -70,7 +70,7 @@ The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment 
 | 8             | 465             | 16.3           | 14.1           |
 | 4             | 1074            | 15.2           | 14.1           |
 
-The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment to human dna file （Homo_sapiens.GRCh38.dna.toplevel.fa.gz，3.2GB） was tested as follows:
+The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment to human dna file(Homo_sapiens.GRCh38.dna.toplevel.fa.gz, 3.2GB) was tested as follows:
 
 | thread number | RunTime(second) | VSZ Memory(GB) | RSS Memory(GB) |
 |---------------|-----------------|----------------|----------------|
@@ -84,6 +84,8 @@ The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment 
 | 8             | 4248            | 110.7          | 108.4          |
 | 4             | 8952            | 109.6          | 108.4          |
 
+Therefore, when align to human cdna, it is recommended to use a server with 16GB of memory.
+When align to the human dna, it is recommended to use a server with 128GB of memory.
 
 ### Contact
 If you have any questions, please contact <xuxi@iict.ac.cn>.

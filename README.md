@@ -1,5 +1,5 @@
 ## What is alignshort?
-alignshort is a very fast DNA short sequence alignment software that supports setting the number of mismatches and bidirectional alignment of nucleotides.
+alignshort is a very fast DNA short sequence alignment software that only consider the number of nucleotide mismatches and bi-directional alignment.
 
 ## Installation and usage
 ### Direct download
@@ -52,11 +52,11 @@ The result file is in csv format and the columns are explained below:
 | startPosition  | alignment start position on the reference sequence |
 | endPosition    | alignment end position on the reference sequence |
 | matchSeq       | matched sequence in reference sequence |
-| mismatchNumber | number of nucleotide mismatches in the match |
+| mismatchNumber | number of nucleotide mismatches in the match, all matches with a number of nucleotide mismatches less than or equal to this set value will be treated as match results |
 
 ### cpu and memory consumption
 
-The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment to human cdna file(Homo_sapiens.GRCh38.cdna.all.fa, 429MB) was tested as follows:
+The performance of 1200 short DNA sequences (19nt), 5 mismatches and  bi-directional alignment to human cdna file(Homo_sapiens.GRCh38.cdna.all.fa, 429MB) was tested as follows:
 
 | Number of threads | RunTime(seconds) | VSZ Memory(GB) | RSS Memory(GB) |
 |---------------|-----------------|----------------|----------------|
@@ -70,7 +70,7 @@ The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment 
 | 8             | 465             | 16.3           | 14.1           |
 | 4             | 1074            | 15.2           | 14.1           |
 
-The performance of 1200 sequences (19nt), 5 mismatches bi-directional alignment to human dna file(Homo_sapiens.GRCh38.dna.toplevel.fa.gz, 3.2GB) was tested as follows:
+The performance of 1200 short DNA sequences (19nt), 5 mismatches and bi-directional alignment to human dna file(Homo_sapiens.GRCh38.dna.toplevel.fa.gz, 3.2GB) was tested as follows:
 
 | Number of threads | RunTime(seconds) | VSZ Memory(GB) | RSS Memory(GB) |
 |---------------|-----------------|----------------|----------------|
